@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "ChallengeCore.Application/1.0.0": {
+        "dependencies": {
+          "ChallengeCore.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ChallengeCore.Application.dll": {}
+        }
+      },
+      "ChallengeCore.Domain/1.0.0": {
+        "runtime": {
+          "ChallengeCore.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ChallengeCore.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ChallengeCore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
