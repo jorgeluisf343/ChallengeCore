@@ -6,6 +6,6 @@ namespace ChallengeCore.Application.Interfaces
     {
         Task<List<RewardDto>> GetRewardsAsync();
         Task<List<UserRewardDto>> GetUserRewardsAsync(Guid userId);
-        Task RedeemRewardAsync(Guid userId, Guid rewardId);
+        Task<SuccessDto> RedeemRewardAsync(Guid userId, Guid rewardId);
     }
 }

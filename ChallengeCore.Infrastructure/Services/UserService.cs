@@ -5,8 +5,8 @@ using ChallengeCore.Domain.Exceptions;
 using ChallengeCore.Infrastructure.Configuration;
 using ChallengeCore.Infrastructure.Data;
 using Microsoft.Extensions.Options;
-using static ChallengeCore.Domain.Enums;
 using ChallengeCore.Application.Interfaces;
+using static ChallengeCore.Domain.Common;
 
 namespace ChallengeCore.Infrastructure.Services
 {
@@ -21,6 +21,9 @@ namespace ChallengeCore.Infrastructure.Services
         {
             if (string.IsNullOrEmpty(dto.Name))
                 throw new BusinessException("El nombre es obligatorio");
+
+            if (string.IsNullOrEmpty(dto.AvatarUrl))
+                throw new BusinessException("El avatar es obligatorio");
 
             var user = new User
             {

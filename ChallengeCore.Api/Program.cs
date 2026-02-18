@@ -11,13 +11,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-
 builder.Services.Configure<DatabaseOptions>(
     builder.Configuration.GetSection("DatabaseOptions"));
 
 builder.Services.Configure<Features>(
     builder.Configuration.GetSection("Features")
 );
+
+builder.Services.Configure<PathImage>(
+    builder.Configuration.GetSection("PathImage")
+);
+
 
 builder.Services.AddDbContext<ApplicationDbContext>((serviceProvider, options) =>
 {
@@ -35,18 +39,26 @@ builder.Services.AddDbContext<ApplicationDbContext>((serviceProvider, options) =
     };
 
     options.UseSqlServer(builderConnection.ConnectionString);
-
-    //options.UseSqlServer(builderConnection.ConnectionString, b => b.MigrationsAssembly("ChallengeCore.Infrastructure"));
-
 });
-
-
 
 //SERVICIOS
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IChallengeService, ChallengeService>();
 builder.Services.AddScoped<IRewardService, RewardService>();
+builder.Services.AddScoped<IPokemonService, PokemonService>();
 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyOrigin() // acepta cualquier origen
+              .AllowAnyHeader() // acepta cualquier header
+              .AllowAnyMethod(); // acepta cualquier método (GET, POST, PUT, DELETE, etc.)
+    });
+});
+
+builder.Services.AddHttpClient<PokemonService>();
 
 //builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
@@ -64,6 +76,8 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 

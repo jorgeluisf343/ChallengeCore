@@ -37,6 +37,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ChallengeCore.Api.Controllers.PokemonController",
+    "Method": "GetImages",
+    "RelativePath": "api/Pokemon/images",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ChallengeCore.Api.Controllers.RewardsController",
     "Method": "GetRewards",
     "RelativePath": "api/Rewards",
@@ -101,7 +111,7 @@
   },
   {
     "ContainingType": "ChallengeCore.Controllers.UsersController",
-    "Method": "GetUser",
+    "Method": "GetUserProfile",
     "RelativePath": "api/Users/{id}",
     "HttpMethod": "POST",
     "IsController": true,

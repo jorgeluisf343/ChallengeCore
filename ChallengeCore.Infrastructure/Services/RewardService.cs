@@ -38,7 +38,7 @@ namespace ChallengeCore.Infrastructure.Services
             return rewards;
         }
 
-        public async Task RedeemRewardAsync(Guid userId, Guid rewardId)
+        public async Task<SuccessDto> RedeemRewardAsync(Guid userId, Guid rewardId)
         {
             using var transaction = await _context.Database.BeginTransactionAsync();
 
@@ -66,6 +66,11 @@ namespace ChallengeCore.Infrastructure.Services
 
                 await _context.SaveChangesAsync();
                 await transaction.CommitAsync();
+
+                return new SuccessDto()
+                {
+                    completed = true
+                };
             }
             catch (Exception)
             {

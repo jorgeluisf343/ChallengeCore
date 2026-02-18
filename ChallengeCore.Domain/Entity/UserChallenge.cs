@@ -1,4 +1,4 @@
-﻿using static ChallengeCore.Domain.Enums;
+﻿using static ChallengeCore.Domain.Common;
 
 namespace ChallengeCore.Domain.Entity
 {

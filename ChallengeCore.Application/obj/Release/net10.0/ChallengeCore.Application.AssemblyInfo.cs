@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChallengeCore.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2abaa27070d611cc198bfc918f6887861b7786b1")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChallengeCore.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChallengeCore.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ChallengeCore.Application.Dtos
+﻿namespace ChallengeCore.Application.Dtos
 {
     public class RewardDto
     {

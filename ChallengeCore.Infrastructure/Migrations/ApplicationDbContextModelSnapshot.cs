@@ -42,8 +42,9 @@ namespace ChallengeCore.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Type")
-                        .HasColumnType("int");
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -57,7 +58,7 @@ namespace ChallengeCore.Infrastructure.Migrations
                             IsBonus = false,
                             Points = 10,
                             Title = "Completa tu perfil",
-                            Type = 0
+                            Type = "simple"
                         },
                         new
                         {
@@ -66,7 +67,7 @@ namespace ChallengeCore.Infrastructure.Migrations
                             IsBonus = false,
                             Points = 20,
                             Title = "Configura una meta de ahorro",
-                            Type = 1
+                            Type = "experto"
                         },
                         new
                         {
@@ -75,7 +76,7 @@ namespace ChallengeCore.Infrastructure.Migrations
                             IsBonus = false,
                             Points = 15,
                             Title = "Selecciona tu tipo de inversión",
-                            Type = 2
+                            Type = "seleccion"
                         },
                         new
                         {
@@ -84,16 +85,16 @@ namespace ChallengeCore.Infrastructure.Migrations
                             IsBonus = false,
                             Points = 25,
                             Title = "Simula un préstamo",
-                            Type = 0
+                            Type = "simple"
                         },
                         new
                         {
                             Id = new Guid("55c567c9-3ec6-4540-92e3-db6ab334f9b4"),
                             Description = "Completa el módulo básico de educación financiera.",
                             IsBonus = true,
-                            Points = 50,
+                            Points = 100,
                             Title = "Reto Premium: Educación Financiera",
-                            Type = 0
+                            Type = "simple"
                         });
                 });
 

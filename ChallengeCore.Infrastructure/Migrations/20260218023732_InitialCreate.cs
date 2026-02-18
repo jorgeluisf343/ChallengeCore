@@ -21,7 +21,7 @@ namespace ChallengeCore.Infrastructure.Migrations
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Points = table.Column<int>(type: "int", nullable: false),
-                    Type = table.Column<int>(type: "int", nullable: false),
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsBonus = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -118,11 +118,11 @@ namespace ChallengeCore.Infrastructure.Migrations
                 columns: new[] { "Id", "Description", "IsBonus", "Points", "Title", "Type" },
                 values: new object[,]
                 {
-                    { new Guid("2456a3c7-fcbf-48b8-8023-bc71e4888318"), "Elige entre las opciones de inversión disponibles.", false, 15, "Selecciona tu tipo de inversión", 2 },
-                    { new Guid("4ed83a3c-6207-4996-b68d-973e2eb1d877"), "Verifica que tu información personal esté completa.", false, 10, "Completa tu perfil", 0 },
-                    { new Guid("55c567c9-3ec6-4540-92e3-db6ab334f9b4"), "Completa el módulo básico de educación financiera.", true, 50, "Reto Premium: Educación Financiera", 0 },
-                    { new Guid("5c3f088a-3acd-4363-870a-44b9f62e3e21"), "Realiza una simulación básica de préstamo.", false, 25, "Simula un préstamo", 0 },
-                    { new Guid("d3312eba-aeca-4721-a8b3-80bccc312409"), "Ingresa el monto objetivo de ahorro mensual.", false, 20, "Configura una meta de ahorro", 1 }
+                    { new Guid("2456a3c7-fcbf-48b8-8023-bc71e4888318"), "Elige entre las opciones de inversión disponibles.", false, 15, "Selecciona tu tipo de inversión", "seleccion" },
+                    { new Guid("4ed83a3c-6207-4996-b68d-973e2eb1d877"), "Verifica que tu información personal esté completa.", false, 10, "Completa tu perfil", "simple" },
+                    { new Guid("55c567c9-3ec6-4540-92e3-db6ab334f9b4"), "Completa el módulo básico de educación financiera.", true, 100, "Reto Premium: Educación Financiera", "simple" },
+                    { new Guid("5c3f088a-3acd-4363-870a-44b9f62e3e21"), "Realiza una simulación básica de préstamo.", false, 25, "Simula un préstamo", "simple" },
+                    { new Guid("d3312eba-aeca-4721-a8b3-80bccc312409"), "Ingresa el monto objetivo de ahorro mensual.", false, 20, "Configura una meta de ahorro", "experto" }
                 });
 
             migrationBuilder.InsertData(

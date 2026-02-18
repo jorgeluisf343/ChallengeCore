@@ -28,3 +28,4 @@ E:\ChallengeCore\ChallengeCore.Application\obj\Debug\net10.0\ChallengeCore.Appli
 E:\ChallengeCore\ChallengeCore.Application\obj\Debug\net10.0\refint\ChallengeCore.Application.dll
 E:\ChallengeCore\ChallengeCore.Application\obj\Debug\net10.0\ChallengeCore.Application.pdb
 E:\ChallengeCore\ChallengeCore.Application\obj\Debug\net10.0\ref\ChallengeCore.Application.dll
+E:\ChallengeCore\ChallengeCore.Application\obj\Debug\net10.0\ChallengeCore.Application.sourcelink.json

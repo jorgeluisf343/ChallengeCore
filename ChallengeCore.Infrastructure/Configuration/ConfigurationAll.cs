@@ -14,4 +14,11 @@
     {
         public bool EnableBonusChallenge { get; set; }
     }
+
+    public class PathImage
+    {
+        public string url { get; set; } = string.Empty;
+    }
+
+
 }

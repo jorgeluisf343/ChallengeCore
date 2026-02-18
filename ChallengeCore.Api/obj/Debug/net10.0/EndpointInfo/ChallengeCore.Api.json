@@ -59,6 +59,18 @@
         }
       }
     },
+    "/api/Pokemon/images": {
+      "get": {
+        "tags": [
+          "Pokemon"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Rewards": {
       "get": {
         "tags": [
@@ -201,6 +213,9 @@
   "tags": [
     {
       "name": "Challenges"
+    },
+    {
+      "name": "Pokemon"
     },
     {
       "name": "Rewards"

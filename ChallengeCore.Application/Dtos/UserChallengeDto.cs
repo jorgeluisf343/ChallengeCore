@@ -1,5 +1,5 @@
 ﻿using System;
-using static ChallengeCore.Domain.Enums;
+using static ChallengeCore.Domain.Common;
 
 namespace ChallengeCore.Application.Dtos
 {
@@ -10,6 +10,8 @@ namespace ChallengeCore.Application.Dtos
         public string Description { get; set; } = string.Empty;
         public int Points { get; set; }
         public ChallengeStatus Status { get; set; }
+        public string Type { get; set; } = string.Empty;
         public bool IsBonus { get; set; }
+
     }
 }

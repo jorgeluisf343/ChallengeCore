@@ -1,6 +1,4 @@
-﻿using static ChallengeCore.Domain.Enums;
-
-namespace ChallengeCore.Domain.Entity
+﻿namespace ChallengeCore.Domain.Entity
 {
     public class Challenge
     {
@@ -12,7 +10,7 @@ namespace ChallengeCore.Domain.Entity
 
         public int Points { get; set; }
 
-        public ChallengeType Type { get; set; } = ChallengeType.Simple;
+        public string Type { get; set; } = string.Empty;
 
         public bool IsBonus { get; set; } = false;
 

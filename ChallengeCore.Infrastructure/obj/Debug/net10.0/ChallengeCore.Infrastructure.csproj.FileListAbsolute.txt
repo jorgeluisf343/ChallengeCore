@@ -36,3 +36,4 @@ E:\ChallengeCore\ChallengeCore.Infrastructure\obj\Debug\net10.0\refint\Challenge
 E:\ChallengeCore\ChallengeCore.Infrastructure\obj\Debug\net10.0\ChallengeCore.Infrastructure.pdb
 E:\ChallengeCore\ChallengeCore.Infrastructure\obj\Debug\net10.0\ChallengeCore.Infrastructure.genruntimeconfig.cache
 E:\ChallengeCore\ChallengeCore.Infrastructure\obj\Debug\net10.0\ref\ChallengeCore.Infrastructure.dll
+E:\ChallengeCore\ChallengeCore.Infrastructure\obj\Debug\net10.0\ChallengeCore.Infrastructure.sourcelink.json

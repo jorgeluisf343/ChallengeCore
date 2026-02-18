@@ -1,6 +1,6 @@
-﻿using ChallengeCore.Domain.Entity;
+﻿using ChallengeCore.Domain;
+using ChallengeCore.Domain.Entity;
 using Microsoft.EntityFrameworkCore;
-using static ChallengeCore.Domain.Enums;
 
 namespace ChallengeCore.Infrastructure.Data
 {
@@ -46,7 +46,7 @@ namespace ChallengeCore.Infrastructure.Data
                     Title = "Completa tu perfil",
                     Description = "Verifica que tu información personal esté completa.",
                     Points = 10,
-                    Type = ChallengeType.Simple,
+                    Type = Common.Constants.Simple,
                     IsBonus = false
                 },
                 new Challenge
@@ -55,7 +55,7 @@ namespace ChallengeCore.Infrastructure.Data
                     Title = "Configura una meta de ahorro",
                     Description = "Ingresa el monto objetivo de ahorro mensual.",
                     Points = 20,
-                    Type = ChallengeType.Input,
+                    Type = Common.Constants.Experto,
                     IsBonus = false
                 },
                 new Challenge
@@ -64,7 +64,7 @@ namespace ChallengeCore.Infrastructure.Data
                     Title = "Selecciona tu tipo de inversión",
                     Description = "Elige entre las opciones de inversión disponibles.",
                     Points = 15,
-                    Type = ChallengeType.Selection,
+                    Type = Common.Constants.Seleccion,
                     IsBonus = false
                 },
                 new Challenge
@@ -73,7 +73,7 @@ namespace ChallengeCore.Infrastructure.Data
                     Title = "Simula un préstamo",
                     Description = "Realiza una simulación básica de préstamo.",
                     Points = 25,
-                    Type = ChallengeType.Simple,
+                    Type = Common.Constants.Simple,
                     IsBonus = false
                 },
                 new Challenge
@@ -81,8 +81,8 @@ namespace ChallengeCore.Infrastructure.Data
                     Id = new Guid("55c567c9-3ec6-4540-92e3-db6ab334f9b4"),
                     Title = "Reto Premium: Educación Financiera",
                     Description = "Completa el módulo básico de educación financiera.",
-                    Points = 50,
-                    Type = ChallengeType.Simple,
+                    Points = 100,
+                    Type = Common.Constants.Simple,
                     IsBonus = true
                 }
 

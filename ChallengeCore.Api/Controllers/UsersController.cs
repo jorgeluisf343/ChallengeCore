@@ -1,4 +1,5 @@
-﻿using ChallengeCore.Application.Dtos;
+﻿using ChallengeCore.Api.Response;
+using ChallengeCore.Application.Dtos;
 using ChallengeCore.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,18 +15,16 @@ namespace ChallengeCore.Controllers
         public async Task<IActionResult> CreateUser(CreateUserDto dto)
         {
             var result = await _userService.CreateUserAsync(dto);
-            return Ok(result);
+            return Ok(new ApiResponse<UserProfileDto>(result));
         }
 
         [HttpPost("{id}")]
-        public async Task<IActionResult> GetUser(Guid id)
+        public async Task<IActionResult> GetUserProfile(Guid id)
         {
             var user = await _userService.GetUserProfileAsync(id);
-
             if (user == null)
                 return NotFound();
-
-            return Ok(user);
+            return Ok(new ApiResponse<UserProfileDto>(user));
         }
     }
 }

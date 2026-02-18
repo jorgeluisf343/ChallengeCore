@@ -1,4 +1,7 @@
-﻿using ChallengeCore.Application.Interfaces;
+﻿using ChallengeCore.Api.Response;
+using ChallengeCore.Application.Dtos;
+using ChallengeCore.Application.Interfaces;
+using ChallengeCore.Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ChallengeCore.Api.Controllers
@@ -12,17 +15,15 @@ namespace ChallengeCore.Api.Controllers
         [HttpPost("complete/{challengeId}")]
         public async Task<IActionResult> CompleteChallenge(Guid challengeId, [FromQuery] Guid userId)
         {
-            await _challengeService.CompleteChallengeAsync(userId, challengeId);
-            return NoContent();
+            var completed = await _challengeService.CompleteChallengeAsync(userId, challengeId);
+            return Ok(new ApiResponse<SuccessDto>(completed));
         }
 
         [HttpGet("users/{userId}")]
         public async Task<IActionResult> GetUserChallenges(Guid userId)
         {
             var challenges = await _challengeService.GetUserChallengesAsync(userId);
-            return Ok(challenges);
+            return Ok(new ApiResponse<IEnumerable<UserChallengeDto>>(challenges));
         }
-
-
     }
 }

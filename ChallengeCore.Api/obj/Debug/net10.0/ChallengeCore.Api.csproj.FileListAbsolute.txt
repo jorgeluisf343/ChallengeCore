@@ -247,4 +247,5 @@ E:\ChallengeCore\ChallengeCore.Api\obj\Debug\net10.0\ChallengeCore.Api.pdb
 E:\ChallengeCore\ChallengeCore.Api\obj\Debug\net10.0\ChallengeCore.Api.genruntimeconfig.cache
 E:\ChallengeCore\ChallengeCore.Api\obj\Debug\net10.0\ref\ChallengeCore.Api.dll
 E:\ChallengeCore\ChallengeCore.Api\obj\Debug\net10.0\ChallengeCore.Api.MvcApplicationPartsAssemblyInfo.cs
+E:\ChallengeCore\ChallengeCore.Api\obj\Debug\net10.0\ChallengeCore.Api.sourcelink.json
 E:\ChallengeCore\ChallengeCore.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
